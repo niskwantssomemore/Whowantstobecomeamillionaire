@@ -10,4 +10,7 @@ import UIKit
 
 class AnswerCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var answerButton: UIButton!
+    func configure (with answer: String) {
+        answerButton.setTitle(answer, for: .normal)
+    }
 }

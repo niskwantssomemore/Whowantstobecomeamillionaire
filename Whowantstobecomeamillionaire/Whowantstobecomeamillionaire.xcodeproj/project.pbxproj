@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4180E3E423FDC483006E091A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4180E3E323FDC483006E091A /* Game.swift */; };
 		41BAE14E23FAB50000F85E7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BAE14D23FAB50000F85E7C /* AppDelegate.swift */; };
 		41BAE15023FAB50000F85E7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BAE14F23FAB50000F85E7C /* SceneDelegate.swift */; };
 		41BAE15523FAB50000F85E7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41BAE15323FAB50000F85E7C /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4180E3E323FDC483006E091A /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		41BAE14A23FAB50000F85E7C /* Whowantstobecomeamillionaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whowantstobecomeamillionaire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41BAE14D23FAB50000F85E7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41BAE14F23FAB50000F85E7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				41BAE14F23FAB50000F85E7C /* SceneDelegate.swift */,
 				41BAE15323FAB50000F85E7C /* Main.storyboard */,
 				41BAE17623FAD4D400F85E7C /* Question.swift */,
+				4180E3E323FDC483006E091A /* Game.swift */,
 				41BAE16B23FAC8D800F85E7C /* Controllers */,
 				41BAE16523FAC71100F85E7C /* GameCaretaker.swift */,
 				41BAE16723FAC73B00F85E7C /* GameResults.swift */,
@@ -192,6 +195,7 @@
 				41BAE14E23FAB50000F85E7C /* AppDelegate.swift in Sources */,
 				41BAE16A23FAC89400F85E7C /* ResultsTableViewController.swift in Sources */,
 				41BAE16D23FACC7800F85E7C /* ResultsTableViewCell.swift in Sources */,
+				4180E3E423FDC483006E091A /* Game.swift in Sources */,
 				41BAE17223FAD1CC00F85E7C /* HintsCollectionViewCell.swift in Sources */,
 				41BAE16623FAC71100F85E7C /* GameCaretaker.swift in Sources */,
 				41BAE17023FAD1A900F85E7C /* QuestionCollectionViewCell.swift in Sources */,

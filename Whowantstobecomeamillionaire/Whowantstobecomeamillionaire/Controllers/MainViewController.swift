@@ -21,6 +21,9 @@ class MainViewController: UIViewController {
     switch segue.identifier {
         case "startGameSegue":
             guard let destination = segue.destination as? GameCollectionViewController else { return }
+            destination.onGameEnd = { [weak self] result in
+                try! self?.caretaker.saveGame(GameResults.shared.records)
+            }
         case .none:
             break
         case .some(_):

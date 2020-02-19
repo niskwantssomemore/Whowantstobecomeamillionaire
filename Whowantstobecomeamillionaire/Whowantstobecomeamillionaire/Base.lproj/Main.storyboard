@@ -98,10 +98,10 @@
                                         <constraint firstItem="gNM-mV-vKP" firstAttribute="top" secondItem="rfL-SA-zpC" secondAttribute="top" id="LLT-0N-cDq"/>
                                         <constraint firstAttribute="bottom" secondItem="4b3-M9-TLS" secondAttribute="bottom" id="NIp-hG-8pS"/>
                                         <constraint firstItem="4b3-M9-TLS" firstAttribute="top" secondItem="rfL-SA-zpC" secondAttribute="top" id="S9Q-TC-67Z"/>
-                                        <constraint firstItem="4b3-M9-TLS" firstAttribute="leading" secondItem="gNM-mV-vKP" secondAttribute="trailing" constant="273" id="cpZ-zH-Lnl"/>
                                         <constraint firstAttribute="trailing" secondItem="4b3-M9-TLS" secondAttribute="trailing" id="eq2-5X-9TN"/>
                                         <constraint firstItem="gNM-mV-vKP" firstAttribute="leading" secondItem="rfL-SA-zpC" secondAttribute="leading" id="oaY-Ac-FBM"/>
                                         <constraint firstAttribute="bottom" secondItem="gNM-mV-vKP" secondAttribute="bottom" id="pQr-Vd-WKK"/>
+                                        <constraint firstItem="4b3-M9-TLS" firstAttribute="leading" relation="lessThanOrEqual" secondItem="gNM-mV-vKP" secondAttribute="trailing" constant="273" id="xqc-6i-U7g"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -121,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="142" y="789"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Game Collection View Controller-->
         <scene sceneID="5we-dS-HOV">
             <objects>
-                <collectionViewController id="do0-mP-Z7J" sceneMemberID="viewController">
+                <collectionViewController id="do0-mP-Z7J" customClass="GameCollectionViewController" customModule="Whowantstobecomeamillionaire" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="QRm-x1-oYh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,24 +137,24 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="QuestionCollectionViewCell" id="xpl-g2-W0G" customClass="QuestionCollectionViewCell" customModule="Whowantstobecomeamillionaire" customModuleProvider="target">
-                                <rect key="frame" x="154.5" y="0.0" width="105.5" height="30"/>
+                                <rect key="frame" x="154.5" y="0.0" width="105.5" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6aW-sz-BIr">
-                                    <rect key="frame" x="0.0" y="0.0" width="105.5" height="30"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Bwx-Ut-WTW">
+                                    <rect key="frame" x="0.0" y="0.0" width="105.5" height="40"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ВОПРОС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTo-Y7-O4f">
-                                            <rect key="frame" x="0.0" y="0.0" width="105.5" height="30"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ВОПРОС" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTo-Y7-O4f">
+                                            <rect key="frame" x="0.0" y="5" width="105.5" height="30"/>
                                             <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="YTo-Y7-O4f" secondAttribute="bottom" id="5CU-9e-3iG"/>
-                                        <constraint firstAttribute="trailing" secondItem="YTo-Y7-O4f" secondAttribute="trailing" id="7CR-af-IE2"/>
-                                        <constraint firstItem="YTo-Y7-O4f" firstAttribute="top" secondItem="6aW-sz-BIr" secondAttribute="top" id="S1U-4B-myo"/>
-                                        <constraint firstItem="YTo-Y7-O4f" firstAttribute="leading" secondItem="6aW-sz-BIr" secondAttribute="leading" id="pYH-tk-8sE"/>
+                                        <constraint firstAttribute="trailing" secondItem="YTo-Y7-O4f" secondAttribute="trailing" id="EOq-YB-oU0"/>
+                                        <constraint firstAttribute="bottom" secondItem="YTo-Y7-O4f" secondAttribute="bottom" constant="5" id="VO2-g2-IPA"/>
+                                        <constraint firstItem="YTo-Y7-O4f" firstAttribute="leading" secondItem="Bwx-Ut-WTW" secondAttribute="leading" id="doS-m8-JIU"/>
+                                        <constraint firstItem="YTo-Y7-O4f" firstAttribute="top" secondItem="Bwx-Ut-WTW" secondAttribute="top" constant="5" id="mDX-WE-QfO"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <connections>
@@ -162,7 +162,7 @@
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HintsCollectionViewCell" id="ofR-tC-PL2" customClass="HintsCollectionViewCell" customModule="Whowantstobecomeamillionaire" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="40" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="50" width="414" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uoO-KL-fPM">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -208,7 +208,7 @@
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AnswerCollectionViewCell" id="0xL-N0-KPx" customClass="AnswerCollectionViewCell" customModule="Whowantstobecomeamillionaire" customModuleProvider="target">
-                                <rect key="frame" x="101" y="100" width="212" height="50"/>
+                                <rect key="frame" x="101" y="110" width="212" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eVu-tB-h4i">
                                     <rect key="frame" x="0.0" y="0.0" width="212" height="50"/>
@@ -219,6 +219,9 @@
                                             <state key="normal" title="Button">
                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="answerTapped:" destination="do0-mP-Z7J" eventType="touchUpInside" id="gGv-a2-pz4"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
