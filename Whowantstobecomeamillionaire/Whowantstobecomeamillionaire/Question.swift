@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Question {
+class Question: Codable {
     var question: String
     var rightAnswer: String
     var answer2: String

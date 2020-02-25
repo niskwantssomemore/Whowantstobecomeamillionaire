@@ -24,7 +24,7 @@
 		41BAE17423FAD1E600F85E7C /* AnswerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BAE17323FAD1E600F85E7C /* AnswerCollectionViewCell.swift */; };
 		41BAE17723FAD4D400F85E7C /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BAE17623FAD4D400F85E7C /* Question.swift */; };
 		41BB0E83240485DC00BC6CC8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BB0E82240485DC00BC6CC8 /* SettingsViewController.swift */; };
-		41BB0E8524048C4B00BC6CC8 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BB0E8424048C4B00BC6CC8 /* QuestionViewController.swift */; };
+		41BB0E8524048C4B00BC6CC8 /* CreateQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BB0E8424048C4B00BC6CC8 /* CreateQuestionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +47,7 @@
 		41BAE17323FAD1E600F85E7C /* AnswerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCollectionViewCell.swift; sourceTree = "<group>"; };
 		41BAE17623FAD4D400F85E7C /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		41BB0E82240485DC00BC6CC8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		41BB0E8424048C4B00BC6CC8 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		41BB0E8424048C4B00BC6CC8 /* CreateQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuestionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +101,7 @@
 				41BAE16E23FAD18400F85E7C /* Results */,
 				41BAE17523FAD1F200F85E7C /* Game */,
 				41BAE16123FABA0D00F85E7C /* MainViewController.swift */,
-				41BB0E8424048C4B00BC6CC8 /* QuestionViewController.swift */,
+				41BB0E8424048C4B00BC6CC8 /* CreateQuestionViewController.swift */,
 				41BB0E82240485DC00BC6CC8 /* SettingsViewController.swift */,
 			);
 			path = Controllers;
@@ -209,7 +209,7 @@
 				41BAE17423FAD1E600F85E7C /* AnswerCollectionViewCell.swift in Sources */,
 				41BB0E83240485DC00BC6CC8 /* SettingsViewController.swift in Sources */,
 				41BAE16823FAC73B00F85E7C /* GameResults.swift in Sources */,
-				41BB0E8524048C4B00BC6CC8 /* QuestionViewController.swift in Sources */,
+				41BB0E8524048C4B00BC6CC8 /* CreateQuestionViewController.swift in Sources */,
 				41BAE17723FAD4D400F85E7C /* Question.swift in Sources */,
 				41BAE16423FAC43F00F85E7C /* GameCollectionViewController.swift in Sources */,
 				41BAE16223FABA0D00F85E7C /* MainViewController.swift in Sources */,

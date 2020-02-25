@@ -197,10 +197,10 @@
             </objects>
             <point key="canvasLocation" x="858" y="927"/>
         </scene>
-        <!--Question View Controller-->
+        <!--Create Question View Controller-->
         <scene sceneID="KPH-gU-wiW">
             <objects>
-                <viewController id="Kck-ab-M7R" customClass="QuestionViewController" customModule="Whowantstobecomeamillionaire" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Kck-ab-M7R" customClass="CreateQuestionViewController" customModule="Whowantstobecomeamillionaire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pQK-fc-K70">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -213,7 +213,7 @@
                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="hv8-Xv-Xsv"/>
+                                    <action selector="questionCreated:" destination="Kck-ab-M7R" eventType="touchUpInside" id="60o-S5-7Sd"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ВОПРОС:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wwv-hr-JgA">
@@ -317,6 +317,7 @@
                         <outlet property="answer3Textfield" destination="xER-WC-Dau" id="ATd-OM-EH6"/>
                         <outlet property="questionTextfield" destination="FE9-wu-8LE" id="Tq1-lf-ciS"/>
                         <outlet property="rightanswerTextfield" destination="WE4-44-uaz" id="Ewl-z7-Haw"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="Add Question" modalPresentationStyle="fullScreen" id="RzU-r3-Y8r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZFi-ym-qES" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -455,6 +456,6 @@
         <image name="logo" width="564" height="251"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hv8-Xv-Xsv"/>
+        <segue reference="RzU-r3-Y8r"/>
     </inferredMetricsTieBreakers>
 </document>

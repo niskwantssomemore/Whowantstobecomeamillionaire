@@ -10,15 +10,17 @@ import UIKit
 
 class GameCollectionViewController: UICollectionViewController {
     var onGameEnd: ((Int) -> Void)?
-    public var questions = [
-        Question(question: "Кто 1-м получил Нобелевскую премию по литературе?", rightAnswer: "Поэт", answer2: "Романист", answer3: "Драматург", answer4: "Эссеист"),
-        Question(question: "С какой буквы начинаются слова, опубликованные в 16-м томе последнего издания Большой советской энциклопедии?", rightAnswer: "М", answer2: "Н", answer3: "О", answer4: "П"),
-        Question(question: "Сколько раз в сутки подзаводят куранты Спасской башни Кремля?", rightAnswer: "Два", answer2: "Один", answer3: "Четыре", answer4: "Три"),
-        Question(question: "Какой химический элемент назван в честь злого подземного гнома?", rightAnswer: "Кобальт", answer2: "Гафний", answer3: "Бериллий", answer4: "Теллур"),
-        Question(question: "В какой из этих столиц бывших союзных республик раньше появилось метро?", rightAnswer: "Тбилиси", answer2: "Ереван", answer3: "Баку", answer4: "Минск")]
+    var caretaker = GameCaretaker()
+    public var questions: [Question] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        questions = try! self.caretaker.loadQuestion()
+        questions.append(Question(question: "Кто 1-м получил Нобелевскую премию по литературе?", rightAnswer: "Поэт", answer2: "Романист", answer3: "Драматург", answer4: "Эссеист"))
+        questions.append(Question(question: "С какой буквы начинаются слова, опубликованные в 16-м томе последнего издания Большой советской энциклопедии?", rightAnswer: "М", answer2: "Н", answer3: "О", answer4: "П"))
+        questions.append(Question(question: "Сколько раз в сутки подзаводят куранты Спасской башни Кремля?", rightAnswer: "Два", answer2: "Один", answer3: "Четыре", answer4: "Три"))
+        questions.append(Question(question: "Какой химический элемент назван в честь злого подземного гнома?", rightAnswer: "Кобальт", answer2: "Гафний", answer3: "Бериллий", answer4: "Теллур"))
+        questions.append(Question(question: "В какой из этих столиц бывших союзных республик раньше появилось метро?", rightAnswer: "Тбилиси", answer2: "Ереван", answer3: "Баку", answer4: "Минск"))
     }
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -67,10 +69,6 @@ class GameCollectionViewController: UICollectionViewController {
             if (Game.shared.questionNumber == 0)
             {
                 Game.shared.win = 1000
-            }
-            else if (Game.shared.questionNumber == 3)
-            {
-                Game.shared.win = 500000
             }
             else
             {
