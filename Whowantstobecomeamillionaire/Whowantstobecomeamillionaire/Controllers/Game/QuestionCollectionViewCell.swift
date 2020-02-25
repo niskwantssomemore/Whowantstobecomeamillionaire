@@ -12,7 +12,6 @@ class QuestionCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var questionLabel: UILabel!
     func configure (with question: String) {
         questionLabel.preferredMaxLayoutWidth = UIScreen.main.bounds.width
-        questionLabel.text = "\(Game.shared.questionNumber + 1). \(question)"
+        questionLabel.text = "\(Game.shared.GameSession!.questionNumber + 1). \(question)"
     }
-    
 }

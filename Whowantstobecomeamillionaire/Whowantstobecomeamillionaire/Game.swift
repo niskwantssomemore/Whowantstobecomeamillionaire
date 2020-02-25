@@ -11,6 +11,13 @@ import Foundation
 class Game {
     private init() {}
     public static let shared = Game()
-    var questionNumber: Int = 0
-    var win: Int = 0
+    var GameSession: GameSession?
+}
+class GameSession {
+    var questionNumber: Int
+    var win: Int
+    init(questionNumber: Int, win: Int) {
+        self.questionNumber = questionNumber
+        self.win = win
+    }
 }

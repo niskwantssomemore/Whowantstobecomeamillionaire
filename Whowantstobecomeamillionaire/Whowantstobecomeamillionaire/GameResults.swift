@@ -21,7 +21,6 @@ class GameResults {
         records.append(contentsOf: savedRecords)
     }
 }
-
 struct Record: Codable {
     let date: Date
     let score: Int

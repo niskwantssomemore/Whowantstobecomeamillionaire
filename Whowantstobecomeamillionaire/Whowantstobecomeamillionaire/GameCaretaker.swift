@@ -13,7 +13,6 @@ class GameCaretaker {
     private let encoder = JSONEncoder()
     private let key = "results"
     private let key1 = "questions"
-    
     func saveGame(_ results: [Record]) throws {
         let data: Data = try encoder.encode(results)
         UserDefaults.standard.set(data, forKey: key)

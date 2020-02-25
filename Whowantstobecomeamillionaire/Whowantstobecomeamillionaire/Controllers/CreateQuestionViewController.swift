@@ -21,16 +21,14 @@ class CreateQuestionViewController: UIViewController {
     @IBAction func questionCreated(_ sender: UIButton) {
         if (questionTextfield.text != "" && rightanswerTextfield.text != "" && answer1Textfield.text != "" && answer2Textfield.text != "" && answer3Textfield.text != "")
         {
-            var newquestion: [Question] = []
+            var newquestion: [Question] = try! self.caretaker.loadQuestion()
             newquestion.append(Question(question: questionTextfield.text!, rightAnswer: rightanswerTextfield.text!, answer2: answer1Textfield.text!, answer3: answer2Textfield.text!, answer4: answer3Textfield.text!))
             try! self.caretaker.saveQuestion(newquestion)
-            newquestion.removeAll()
             performSegue(withIdentifier: "Add Question", sender: nil)
         }
         else
         {
             show(message: "Заполните все поля!")
-            return
         }
     }
 }

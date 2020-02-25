@@ -12,7 +12,6 @@ class GameCollectionViewController: UICollectionViewController {
     var onGameEnd: ((Int) -> Void)?
     var caretaker = GameCaretaker()
     public var questions: [Question] = []
-
     override func viewDidLoad() {
         super.viewDidLoad()
         questions = try! self.caretaker.loadQuestion()
@@ -21,77 +20,76 @@ class GameCollectionViewController: UICollectionViewController {
         questions.append(Question(question: "Сколько раз в сутки подзаводят куранты Спасской башни Кремля?", rightAnswer: "Два", answer2: "Один", answer3: "Четыре", answer4: "Три"))
         questions.append(Question(question: "Какой химический элемент назван в честь злого подземного гнома?", rightAnswer: "Кобальт", answer2: "Гафний", answer3: "Бериллий", answer4: "Теллур"))
         questions.append(Question(question: "В какой из этих столиц бывших союзных республик раньше появилось метро?", rightAnswer: "Тбилиси", answer2: "Ереван", answer3: "Баку", answer4: "Минск"))
+        let session = GameSession(questionNumber: 0, win: 0)
+        Game.shared.GameSession = session
     }
-
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
-
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.row == 0
         {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuestionCollectionViewCell", for: indexPath) as! QuestionCollectionViewCell
-            cell.configure(with: questions[Game.shared.questionNumber].question)
+            cell.configure(with: questions[Game.shared.GameSession!.questionNumber].question)
             return cell
         }
         else if indexPath.row == 1
         {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnswerCollectionViewCell", for: indexPath) as! AnswerCollectionViewCell
-            cell.configure(with: questions[Game.shared.questionNumber].rightAnswer)
+            cell.configure(with: questions[Game.shared.GameSession!.questionNumber].rightAnswer)
             return cell
         }
         else if indexPath.row == 2
         {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnswerCollectionViewCell", for: indexPath) as! AnswerCollectionViewCell
-            cell.configure(with: questions[Game.shared.questionNumber].answer2)
+            cell.configure(with: questions[Game.shared.GameSession!.questionNumber].answer2)
             return cell
         }
         else if indexPath.row == 3
         {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnswerCollectionViewCell", for: indexPath) as! AnswerCollectionViewCell
-            cell.configure(with: questions[Game.shared.questionNumber].answer3)
+            cell.configure(with: questions[Game.shared.GameSession!.questionNumber].answer3)
             return cell
         }
         else
         {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnswerCollectionViewCell", for: indexPath) as! AnswerCollectionViewCell
-            cell.configure(with: questions[Game.shared.questionNumber].answer4)
+            cell.configure(with: questions[Game.shared.GameSession!.questionNumber].answer4)
             return cell
         }
     }
     @IBAction func answerTapped(_ sender: UIButton) {
-        if (sender.titleLabel?.text == questions[Game.shared.questionNumber].rightAnswer && Game.shared.questionNumber < questions.count - 1)
+        if (sender.titleLabel?.text == questions[Game.shared.GameSession!.questionNumber].rightAnswer && Game.shared.GameSession!.questionNumber < questions.count - 1)
         {
-            if (Game.shared.questionNumber == 0)
+            if (Game.shared.GameSession!.questionNumber == 0)
             {
-                Game.shared.win = 1000
+                Game.shared.GameSession!.win = 1000
             }
             else
             {
-                Game.shared.win *= 10
+                Game.shared.GameSession!.win *= 10
             }
-            Game.shared.questionNumber += 1
+            Game.shared.GameSession!.questionNumber += 1
             collectionView.reloadData()
         }
-        else if (sender.titleLabel?.text != questions[Game.shared.questionNumber].rightAnswer)
+        else if (sender.titleLabel?.text != questions[Game.shared.GameSession!.questionNumber].rightAnswer)
         {
-            GameResults.shared.addRecord(Game.shared.win)
-            Game.shared.win = 0
-            Game.shared.questionNumber = 0
-            self.onGameEnd?(Game.shared.win)
+            GameResults.shared.addRecord(Game.shared.GameSession!.win)
+            Game.shared.GameSession!.win = 0
+            Game.shared.GameSession!.questionNumber = 0
+            self.onGameEnd?(Game.shared.GameSession!.win)
             self.dismiss(animated: true, completion: nil)
         }
         else
         {
-            Game.shared.win = 1000000
-            GameResults.shared.addRecord(Game.shared.win)
-            Game.shared.win = 0
-            Game.shared.questionNumber = 0
-            self.onGameEnd?(Game.shared.win)
+            Game.shared.GameSession!.win = 1000000
+            GameResults.shared.addRecord(Game.shared.GameSession!.win)
+            Game.shared.GameSession!.win = 0
+            Game.shared.GameSession!.questionNumber = 0
+            self.onGameEnd?(Game.shared.GameSession!.win)
             self.dismiss(animated: true, completion: nil)
         }
     }

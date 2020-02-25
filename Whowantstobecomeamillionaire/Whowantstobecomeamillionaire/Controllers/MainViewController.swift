@@ -9,7 +9,6 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
     @IBOutlet weak var startGameButton: UIButton!
     var caretaker = GameCaretaker()
     override func viewDidLoad() {
