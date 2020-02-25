@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4180E3E423FDC483006E091A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4180E3E323FDC483006E091A /* Game.swift */; };
+		41962E0D2405ADB300E0D04F /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41962E0C2405ADB300E0D04F /* Difficulty.swift */; };
 		41BAE14E23FAB50000F85E7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BAE14D23FAB50000F85E7C /* AppDelegate.swift */; };
 		41BAE15023FAB50000F85E7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BAE14F23FAB50000F85E7C /* SceneDelegate.swift */; };
 		41BAE15523FAB50000F85E7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41BAE15323FAB50000F85E7C /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		4180E3E323FDC483006E091A /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		41962E0C2405ADB300E0D04F /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
 		41BAE14A23FAB50000F85E7C /* Whowantstobecomeamillionaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whowantstobecomeamillionaire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41BAE14D23FAB50000F85E7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41BAE14F23FAB50000F85E7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41962E0E2405ADBB00E0D04F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				41BB0E82240485DC00BC6CC8 /* SettingsViewController.swift */,
+				41962E0C2405ADB300E0D04F /* Difficulty.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		41BAE14123FAB50000F85E7C = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +113,7 @@
 				41BAE17523FAD1F200F85E7C /* Game */,
 				41BAE16123FABA0D00F85E7C /* MainViewController.swift */,
 				41BB0E8424048C4B00BC6CC8 /* CreateQuestionViewController.swift */,
-				41BB0E82240485DC00BC6CC8 /* SettingsViewController.swift */,
+				41962E0E2405ADBB00E0D04F /* Settings */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -212,6 +223,7 @@
 				41BB0E8524048C4B00BC6CC8 /* CreateQuestionViewController.swift in Sources */,
 				41BAE17723FAD4D400F85E7C /* Question.swift in Sources */,
 				41BAE16423FAC43F00F85E7C /* GameCollectionViewController.swift in Sources */,
+				41962E0D2405ADB300E0D04F /* Difficulty.swift in Sources */,
 				41BAE16223FABA0D00F85E7C /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,6 +12,7 @@ class GameCollectionViewController: UICollectionViewController {
     var onGameEnd: ((Int) -> Void)?
     var caretaker = GameCaretaker()
     public var questions: [Question] = []
+    public var selectedDifficulty: Difficulty?
     override func viewDidLoad() {
         super.viewDidLoad()
         questions = try! self.caretaker.loadQuestion()

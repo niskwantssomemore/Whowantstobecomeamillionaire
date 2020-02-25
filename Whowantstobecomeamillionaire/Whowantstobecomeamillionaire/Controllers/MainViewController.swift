@@ -10,6 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     @IBOutlet weak var startGameButton: UIButton!
+    public var selectedDifficulty: Difficulty = .easy
     var caretaker = GameCaretaker()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,7 @@ class MainViewController: UIViewController {
     switch segue.identifier {
         case "startGameSegue":
             guard let destination = segue.destination as? GameCollectionViewController else { return }
+            destination.selectedDifficulty = selectedDifficulty
             destination.onGameEnd = { [weak self] result in
                 try! self?.caretaker.saveGame(GameResults.shared.records)
             }

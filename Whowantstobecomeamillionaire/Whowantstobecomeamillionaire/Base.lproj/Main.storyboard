@@ -31,7 +31,7 @@
                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="h4B-0H-ghP"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="Confirm Settings" modalPresentationStyle="fullScreen" id="h4B-0H-ghP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -48,6 +48,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="92C-gV-dWc"/>
                     <connections>
+                        <outlet property="confirmSettingsButton" destination="7cn-1K-54a" id="6Zr-tI-mhK"/>
                         <outlet property="difficultyControl" destination="4hQ-AE-x77" id="em0-Xs-cWu"/>
                     </connections>
                 </viewController>
@@ -456,6 +457,6 @@
         <image name="logo" width="564" height="251"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="RzU-r3-Y8r"/>
+        <segue reference="h4B-0H-ghP"/>
     </inferredMetricsTieBreakers>
 </document>

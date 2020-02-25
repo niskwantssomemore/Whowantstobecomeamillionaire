@@ -16,6 +16,7 @@ class Game {
 class GameSession {
     var questionNumber: Int
     var win: Int
+    var difficulty: Difficulty = .easy
     init(questionNumber: Int, win: Int) {
         self.questionNumber = questionNumber
         self.win = win
