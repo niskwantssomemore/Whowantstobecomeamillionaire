@@ -11,9 +11,8 @@ import UIKit
 class PercentCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var percentLabel: UILabel!
     func configure (with responseRate: Observable<Double>) {
-        percentLabel.preferredMaxLayoutWidth = UIScreen.main.bounds.width
         responseRate.addObserver(self, options: [.new, .initial], closure: { [weak self] (responseRate, _) in
-            self?.percentLabel.text = "\(responseRate)"
+            self?.percentLabel.text = "Доля отвеченных вопросов \(responseRate)"
         })
     }
 }

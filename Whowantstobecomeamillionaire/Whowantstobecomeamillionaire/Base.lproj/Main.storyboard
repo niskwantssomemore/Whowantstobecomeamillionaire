@@ -373,40 +373,36 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4c-ua-k7t">
-                                            <rect key="frame" x="186.5" y="10" width="41" height="30"/>
+                                            <rect key="frame" x="368" y="0.0" width="41" height="50"/>
                                             <state key="normal" title="50:50">
                                                 <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="fiftyTapped:" destination="do0-mP-Z7J" eventType="touchUpInside" id="5Eg-sc-nUz"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sN-DR-H4B">
-                                            <rect key="frame" x="0.0" y="0.0" width="124" height="50"/>
+                                            <rect key="frame" x="5" y="0.0" width="124" height="50"/>
                                             <state key="normal" title="Право на ошибку">
                                                 <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAq-oE-bF8">
-                                            <rect key="frame" x="296" y="0.0" width="118" height="50"/>
-                                            <state key="normal" title="Замена вопроса">
-                                                <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </state>
+                                            <connections>
+                                                <action selector="insuranceTapped:" destination="do0-mP-Z7J" eventType="touchUpInside" id="PPP-Uc-Ycv"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="c4c-ua-k7t" firstAttribute="centerX" secondItem="uoO-KL-fPM" secondAttribute="centerX" id="02e-n3-WXj"/>
                                         <constraint firstAttribute="bottom" secondItem="2sN-DR-H4B" secondAttribute="bottom" id="3mn-1P-qP7"/>
-                                        <constraint firstItem="2sN-DR-H4B" firstAttribute="leading" secondItem="uoO-KL-fPM" secondAttribute="leading" id="5ru-hc-VHg"/>
+                                        <constraint firstItem="2sN-DR-H4B" firstAttribute="leading" secondItem="uoO-KL-fPM" secondAttribute="leading" constant="5" id="5ru-hc-VHg"/>
+                                        <constraint firstAttribute="bottom" secondItem="c4c-ua-k7t" secondAttribute="bottom" id="Cgr-cb-25j"/>
                                         <constraint firstItem="2sN-DR-H4B" firstAttribute="top" secondItem="uoO-KL-fPM" secondAttribute="top" id="EDj-eg-7jv"/>
-                                        <constraint firstItem="aAq-oE-bF8" firstAttribute="leading" secondItem="c4c-ua-k7t" secondAttribute="trailing" priority="999" constant="68.5" id="HRs-Yf-e2y"/>
-                                        <constraint firstAttribute="trailing" secondItem="aAq-oE-bF8" secondAttribute="trailing" id="KIB-uN-ZLm"/>
-                                        <constraint firstAttribute="bottom" secondItem="aAq-oE-bF8" secondAttribute="bottom" id="Uk9-Lf-lRr"/>
-                                        <constraint firstItem="c4c-ua-k7t" firstAttribute="centerY" secondItem="uoO-KL-fPM" secondAttribute="centerY" id="lNC-g0-NaK"/>
-                                        <constraint firstItem="c4c-ua-k7t" firstAttribute="leading" secondItem="2sN-DR-H4B" secondAttribute="trailing" priority="999" constant="62.5" id="tyB-mB-UJ8"/>
-                                        <constraint firstItem="aAq-oE-bF8" firstAttribute="top" secondItem="uoO-KL-fPM" secondAttribute="top" id="uc6-qb-20C"/>
+                                        <constraint firstAttribute="trailing" secondItem="c4c-ua-k7t" secondAttribute="trailing" constant="5" id="d8e-zy-Mrv"/>
+                                        <constraint firstItem="c4c-ua-k7t" firstAttribute="leading" secondItem="2sN-DR-H4B" secondAttribute="trailing" priority="999" constant="239" id="yAC-Nh-Kxv"/>
+                                        <constraint firstItem="c4c-ua-k7t" firstAttribute="top" secondItem="uoO-KL-fPM" secondAttribute="top" id="zdb-rN-ZYZ"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="414" height="50"/>
                                 <connections>
-                                    <outlet property="changeButton" destination="aAq-oE-bF8" id="FKN-xG-Ov1"/>
                                     <outlet property="fiftyButton" destination="c4c-ua-k7t" id="ypz-va-Dec"/>
                                     <outlet property="insuranceButton" destination="2sN-DR-H4B" id="GoC-IF-eia"/>
                                 </connections>

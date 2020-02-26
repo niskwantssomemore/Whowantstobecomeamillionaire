@@ -17,6 +17,8 @@ class GameSession {
     var questionNumber: Int
     var win: Int
     var difficulty: Difficulty
+    var fifty: Bool = true
+    var insurance: Bool = true
     init(questionNumber: Int, win: Int, difficulty: Difficulty) {
         self.questionNumber = questionNumber
         self.win = win
