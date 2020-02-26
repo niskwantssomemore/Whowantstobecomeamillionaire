@@ -10,6 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     @IBOutlet weak var startGameButton: UIButton!
+    @IBOutlet weak var lastResultLabel: UILabel!
     public var selectedDifficulty: Difficulty = .easy
     var caretaker = GameCaretaker()
     override func viewDidLoad() {
@@ -23,6 +24,7 @@ class MainViewController: UIViewController {
             guard let destination = segue.destination as? GameCollectionViewController else { return }
             destination.selectedDifficulty = selectedDifficulty
             destination.onGameEnd = { [weak self] result in
+                self?.lastResultLabel.text = "Ваш последний выигрыш: \(result)"
                 try! self?.caretaker.saveGame(GameResults.shared.records)
             }
         case .none:

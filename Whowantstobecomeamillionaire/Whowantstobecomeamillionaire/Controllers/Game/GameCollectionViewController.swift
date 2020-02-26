@@ -108,7 +108,7 @@ class GameCollectionViewController: UICollectionViewController {
     @IBAction func answerTapped(_ sender: UIButton) {
         if (sender.titleLabel?.text == questions[questionOrder[Game.shared.GameSession!.questionNumber]].rightAnswer && Game.shared.GameSession!.questionNumber < questions.count - 1)
         {
-            if (Game.shared.GameSession!.questionNumber == 0)
+            if (Game.shared.GameSession!.win == 0)
             {
                 Game.shared.GameSession!.win = 10
             }

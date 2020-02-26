@@ -12,7 +12,7 @@ class PercentCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var percentLabel: UILabel!
     func configure (with responseRate: Observable<Double>) {
         responseRate.addObserver(self, options: [.new, .initial], closure: { [weak self] (responseRate, _) in
-            self?.percentLabel.text = "Доля отвеченных вопросов \(responseRate)"
+            self?.percentLabel.text = "Доля отвеченных вопросов \(Double(round(responseRate*1000)/1000))"
         })
     }
 }

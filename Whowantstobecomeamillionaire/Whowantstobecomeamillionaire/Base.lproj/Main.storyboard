@@ -111,6 +111,12 @@
                                     <segue destination="Kck-ab-M7R" kind="show" id="8ET-df-br2"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTH-si-JXE">
+                                <rect key="frame" x="10" y="239" width="394" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -123,11 +129,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oyD-nM-f2a" secondAttribute="bottom" constant="10" id="MnT-NZ-h5a"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zlQ-Mp-aHt" secondAttribute="bottom" id="N0d-eg-kMd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oyD-nM-f2a" secondAttribute="trailing" constant="107" id="OFd-KZ-Tgg"/>
+                            <constraint firstItem="wTH-si-JXE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="SH6-Em-VuT"/>
                             <constraint firstItem="zlQ-Mp-aHt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d4q-J6-9y4"/>
                             <constraint firstItem="rmp-Xb-kSf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="eMe-YG-aMa"/>
                             <constraint firstItem="aBd-YM-T6L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="205" id="gAM-03-X9B"/>
                             <constraint firstItem="oyD-nM-f2a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="hYR-Fr-SWs"/>
                             <constraint firstItem="zlQ-Mp-aHt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lC9-bM-NDv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wTH-si-JXE" secondAttribute="trailing" constant="10" id="pab-Rp-PbU"/>
+                            <constraint firstItem="aBd-YM-T6L" firstAttribute="top" secondItem="wTH-si-JXE" secondAttribute="bottom" constant="10" id="rpm-31-o9K"/>
                             <constraint firstItem="rmp-Xb-kSf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="scR-EM-fte"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QKl-kg-Ize" secondAttribute="bottom" constant="204" id="wXM-Sc-VYS"/>
                         </constraints>
@@ -135,6 +144,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="oAb-5I-WJ9"/>
                     <connections>
+                        <outlet property="lastResultLabel" destination="wTH-si-JXE" id="SsL-fn-Mre"/>
                         <outlet property="startGameButton" destination="aBd-YM-T6L" id="01N-r2-l1D"/>
                     </connections>
                 </viewController>
@@ -152,33 +162,33 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultsTableViewCell" id="gZL-YZ-n6J" customClass="ResultsTableViewCell" customModule="Whowantstobecomeamillionaire" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="30.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="24.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gZL-YZ-n6J" id="rfL-SA-zpC">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="30.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="24.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNM-mV-vKP">
-                                            <rect key="frame" x="0.0" y="0.0" width="60" height="30.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="48" height="24.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4b3-M9-TLS">
-                                            <rect key="frame" x="333" y="0.0" width="81" height="30.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <rect key="frame" x="348.5" y="0.0" width="65.5" height="24.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="4b3-M9-TLS" firstAttribute="leading" relation="lessThanOrEqual" secondItem="gNM-mV-vKP" secondAttribute="trailing" constant="300.5" id="ASN-As-ltK"/>
                                         <constraint firstItem="gNM-mV-vKP" firstAttribute="top" secondItem="rfL-SA-zpC" secondAttribute="top" id="LLT-0N-cDq"/>
                                         <constraint firstAttribute="bottom" secondItem="4b3-M9-TLS" secondAttribute="bottom" id="NIp-hG-8pS"/>
                                         <constraint firstItem="4b3-M9-TLS" firstAttribute="top" secondItem="rfL-SA-zpC" secondAttribute="top" id="S9Q-TC-67Z"/>
                                         <constraint firstAttribute="trailing" secondItem="4b3-M9-TLS" secondAttribute="trailing" id="eq2-5X-9TN"/>
                                         <constraint firstItem="gNM-mV-vKP" firstAttribute="leading" secondItem="rfL-SA-zpC" secondAttribute="leading" id="oaY-Ac-FBM"/>
                                         <constraint firstAttribute="bottom" secondItem="gNM-mV-vKP" secondAttribute="bottom" id="pQr-Vd-WKK"/>
-                                        <constraint firstItem="4b3-M9-TLS" firstAttribute="leading" relation="lessThanOrEqual" secondItem="gNM-mV-vKP" secondAttribute="trailing" constant="273" id="xqc-6i-U7g"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
