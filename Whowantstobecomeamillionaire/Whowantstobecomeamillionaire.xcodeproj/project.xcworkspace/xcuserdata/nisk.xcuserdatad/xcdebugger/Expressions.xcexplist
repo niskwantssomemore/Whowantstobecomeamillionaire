@@ -6,15 +6,15 @@
          contextName = "GameCollectionViewController.collectionView(_:cellForItemAt:):GameCollectionViewController.swift">
       </ContextState>
       <ContextState
+         contextName = "GameCollectionViewController.viewDidLoad():GameCollectionViewController.swift">
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in MainViewController.prepare(for:sender:):MainViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "GameResults.shared.records">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "GameCollectionViewController.viewDidLoad():GameCollectionViewController.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

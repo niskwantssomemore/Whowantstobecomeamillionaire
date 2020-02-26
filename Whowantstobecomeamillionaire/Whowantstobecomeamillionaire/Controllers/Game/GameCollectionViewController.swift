@@ -13,6 +13,7 @@ class GameCollectionViewController: UICollectionViewController {
     var caretaker = GameCaretaker()
     public var questions: [Question] = []
     public var selectedDifficulty: Difficulty?
+    private let createOrder: CreateQuestionsOrder = EasyStrategy()
     override func viewDidLoad() {
         super.viewDidLoad()
         questions = try! self.caretaker.loadQuestion()
@@ -21,7 +22,7 @@ class GameCollectionViewController: UICollectionViewController {
         questions.append(Question(question: "Сколько раз в сутки подзаводят куранты Спасской башни Кремля?", rightAnswer: "Два", answer2: "Один", answer3: "Четыре", answer4: "Три"))
         questions.append(Question(question: "Какой химический элемент назван в честь злого подземного гнома?", rightAnswer: "Кобальт", answer2: "Гафний", answer3: "Бериллий", answer4: "Теллур"))
         questions.append(Question(question: "В какой из этих столиц бывших союзных республик раньше появилось метро?", rightAnswer: "Тбилиси", answer2: "Ереван", answer3: "Баку", answer4: "Минск"))
-        let session = GameSession(questionNumber: 0, win: 0)
+        let session = GameSession(questionNumber: 0, win: 0, difficulty: selectedDifficulty!)
         Game.shared.GameSession = session
     }
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -31,6 +32,17 @@ class GameCollectionViewController: UICollectionViewController {
         return 5
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        var createStrategy: CreateQuestionsOrder {
+            switch self.selectedDifficulty {
+            case .easy:
+                return EasyStrategy()
+            case .hard:
+                return HardStrategy()
+            case .none:
+                return EasyStrategy()
+            }
+        }
+        let order = createStrategy.createOrder(questions: questions)
         if indexPath.row == 0
         {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuestionCollectionViewCell", for: indexPath) as! QuestionCollectionViewCell
