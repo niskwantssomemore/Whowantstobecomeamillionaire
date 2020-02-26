@@ -440,6 +440,32 @@
                                     <outlet property="answerButton" destination="ZhT-bo-9XN" id="uWw-WW-oes"/>
                                 </connections>
                             </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PercentCollectionViewCell" id="o5d-zg-pmd" customClass="PercentCollectionViewCell" customModule="Whowantstobecomeamillionaire" customModuleProvider="target">
+                                <rect key="frame" x="107" y="170" width="200" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="D8V-qM-89Y">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="60"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfs-SW-2ce">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="60"/>
+                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Xfs-SW-2ce" firstAttribute="top" secondItem="D8V-qM-89Y" secondAttribute="top" id="2w2-Hb-wXn"/>
+                                        <constraint firstAttribute="trailing" secondItem="Xfs-SW-2ce" secondAttribute="trailing" id="X3e-8t-VgM"/>
+                                        <constraint firstAttribute="bottom" secondItem="Xfs-SW-2ce" secondAttribute="bottom" id="hgz-0c-Akx"/>
+                                        <constraint firstItem="Xfs-SW-2ce" firstAttribute="leading" secondItem="D8V-qM-89Y" secondAttribute="leading" id="lGD-v2-feu"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="200" height="60"/>
+                                <connections>
+                                    <outlet property="percentLabel" destination="Xfs-SW-2ce" id="fO4-dC-9sp"/>
+                                </connections>
+                            </collectionViewCell>
                         </cells>
                         <connections>
                             <outlet property="dataSource" destination="do0-mP-Z7J" id="f5R-dm-Kxo"/>
@@ -450,7 +476,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="inl-Lm-HtD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="858" y="-546"/>
+            <point key="canvasLocation" x="857.97101449275374" y="-546.42857142857144"/>
         </scene>
     </scenes>
     <resources>

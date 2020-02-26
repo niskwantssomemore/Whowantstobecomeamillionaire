@@ -29,6 +29,8 @@
 		41BAE17723FAD4D400F85E7C /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BAE17623FAD4D400F85E7C /* Question.swift */; };
 		41BB0E83240485DC00BC6CC8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BB0E82240485DC00BC6CC8 /* SettingsViewController.swift */; };
 		41BB0E8524048C4B00BC6CC8 /* CreateQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BB0E8424048C4B00BC6CC8 /* CreateQuestionViewController.swift */; };
+		41D870B82406AFAE008BDFF2 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D870B72406AFAE008BDFF2 /* Observable.swift */; };
+		41D870BA2406B1EF008BDFF2 /* PercentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D870B92406B1EF008BDFF2 /* PercentCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		41BAE17623FAD4D400F85E7C /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		41BB0E82240485DC00BC6CC8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		41BB0E8424048C4B00BC6CC8 /* CreateQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuestionViewController.swift; sourceTree = "<group>"; };
+		41D870B72406AFAE008BDFF2 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		41D870B92406B1EF008BDFF2 /* PercentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 				41BAE14D23FAB50000F85E7C /* AppDelegate.swift */,
 				41BAE14F23FAB50000F85E7C /* SceneDelegate.swift */,
 				41BAE15323FAB50000F85E7C /* Main.storyboard */,
+				41D870B72406AFAE008BDFF2 /* Observable.swift */,
 				41BAE17623FAD4D400F85E7C /* Question.swift */,
 				4180E3E323FDC483006E091A /* Game.swift */,
 				419F1D362405E4100017F071 /* Strategy */,
@@ -148,11 +153,20 @@
 			isa = PBXGroup;
 			children = (
 				41BAE16323FAC43F00F85E7C /* GameCollectionViewController.swift */,
+				41D870BB2406B8FF008BDFF2 /* Outlets */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		41D870BB2406B8FF008BDFF2 /* Outlets */ = {
+			isa = PBXGroup;
+			children = (
 				41BAE16F23FAD1A900F85E7C /* QuestionCollectionViewCell.swift */,
 				41BAE17323FAD1E600F85E7C /* AnswerCollectionViewCell.swift */,
 				41BAE17123FAD1CC00F85E7C /* HintsCollectionViewCell.swift */,
+				41D870B92406B1EF008BDFF2 /* PercentCollectionViewCell.swift */,
 			);
-			path = Game;
+			path = Outlets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +247,7 @@
 				41BAE17223FAD1CC00F85E7C /* HintsCollectionViewCell.swift in Sources */,
 				41BAE16623FAC71100F85E7C /* GameCaretaker.swift in Sources */,
 				41BAE17023FAD1A900F85E7C /* QuestionCollectionViewCell.swift in Sources */,
+				41D870BA2406B1EF008BDFF2 /* PercentCollectionViewCell.swift in Sources */,
 				41BAE15023FAB50000F85E7C /* SceneDelegate.swift in Sources */,
 				41BAE17423FAD1E600F85E7C /* AnswerCollectionViewCell.swift in Sources */,
 				419F1D352405E4070017F071 /* Strategy.swift in Sources */,
@@ -242,6 +257,7 @@
 				41BB0E8524048C4B00BC6CC8 /* CreateQuestionViewController.swift in Sources */,
 				41BAE17723FAD4D400F85E7C /* Question.swift in Sources */,
 				41BAE16423FAC43F00F85E7C /* GameCollectionViewController.swift in Sources */,
+				41D870B82406AFAE008BDFF2 /* Observable.swift in Sources */,
 				41962E0D2405ADB300E0D04F /* Difficulty.swift in Sources */,
 				41BAE16223FABA0D00F85E7C /* MainViewController.swift in Sources */,
 				419F1D332405E2490017F071 /* HardStrategy.swift in Sources */,
